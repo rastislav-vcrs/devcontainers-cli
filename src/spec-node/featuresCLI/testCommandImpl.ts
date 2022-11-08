@@ -374,6 +374,7 @@ async function launchProject(params: DockerResolverParameters, workspaceFolder: 
 		skipFeatureAutoMapping: common.skipFeatureAutoMapping,
 		experimentalImageMetadata: common.experimentalImageMetadata,
 		skipPersistingCustomizationsFromFeatures: common.skipPersistingCustomizationsFromFeatures,
+		network: undefined,
 		log: text => quiet ? null : process.stderr.write(text),
 	};
 
@@ -473,5 +474,6 @@ async function generateDockerParams(workspaceFolder: string, args: FeaturesTestC
 		skipPostAttach: false,
 		experimentalImageMetadata: false,
 		skipPersistingCustomizationsFromFeatures: false,
+		network: undefined,
 	}, disposables);
 }
